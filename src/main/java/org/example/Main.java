@@ -16,10 +16,13 @@ public class Main {
         ChromeOptions options=new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         webdriver = new ChromeDriver(options);
+
+
+        System.out.println("Open Ebay");
     }
 
     @Test
     public void btest(){
-
+        System.out.println("test Ebay");
     }
 }

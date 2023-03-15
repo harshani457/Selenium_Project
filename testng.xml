@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <parameter name="url" value="https://www.ebay.com/"></parameter>
+    <test verbose="2" preserve-order="true" name="C:\Users\ACER\OneDrive\Desktop\Third Year Second Sem\Computer Science\QA\Selenium_Project">
+
+        <classes>
+            <class name="org.example.Main">
+                <methods>
+                    <include name="setup"/>
+                    <include name="btest"/>
+                </methods>
+            </class>
+            <class name="org.example.SelectMobileTest">
+                <methods>
+                    <include name="test3"/>
+                </methods>
+            </class>
+        </classes>
+
+    </test>
+
+
+</suite>
