@@ -1,25 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
 
-    <parameter name="url" value="https://www.ebay.com/"></parameter>
-    <test verbose="2" preserve-order="true" name="C:\Users\ACER\OneDrive\Desktop\Third Year Second Sem\Computer Science\QA\Selenium_Project">
 
+    <test name="ChromeTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://www.ebay.com/"/>
         <classes>
             <class name="org.example.Main">
                 <methods>
                     <include name="setup"/>
-                    <include name="btest"/>
                 </methods>
             </class>
             <class name="org.example.SelectMobileTest">
                 <methods>
-                    <include name="test3"/>
+                    <include name="navigateToUrl"/>
+                    <include name="verifyUrl"/>
+                    <include name="selectCategory"/>
+                    <include name="searchMobile"/>
+                    <include name="selectApple"/>
+                    <include name="selectFirstItem"/>
+                </methods>
+            </class>
+            <class name="org.example.PurchaseMobileTest">
+                <methods>
+                    <include name="dropDownSelections"/>
+                    <include name="selectModel"/>
+                    <include name="selectCarrier"/>
+                    <include name="selectStorageCapacity"/>
+                    <include name="selectColor"/>
+                    <include name="selectCosmetic"/>
+                    <include name="getItemName"/>
+                    <include name="getItemPrice"/>
+                    <include name="getItemCondition"/>
+                    <include name="getItemQuantity"/>
+                    <include name="addToCart"/>
+                    <include name="assertItemTitle"/>
+                    <include name="assertPrice"/>
+                    <include name="assertQuantity"/>
+                    <include name="assertSubTotal"/>
+                    <include name="getShipping"/>
+
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+
+    <test name="FirefoxTest">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="https://www.ebay.com/"/>
+        <classes>
+            <class name="org.example.Main">
+                <methods>
+                    <include name="setup"/>
+                </methods>
+            </class>
+            <class name="org.example.SelectMobileTest">
+                <methods>
+                    <include name="navigateToUrl"/>
+                    <include name="verifyUrl"/>
+                    <include name="selectCategory"/>
+                    <include name="searchMobile"/>
+                    <include name="selectApple"/>
+                    <include name="selectFirstItem"/>
+                </methods>
+            </class>
+            <class name="org.example.PurchaseMobileTest">
+                <methods>
+                    <include name="dropDownSelections"/>
+                    <include name="selectModel"/>
+                    <include name="selectCarrier"/>
+                    <include name="selectStorageCapacity"/>
+                    <include name="selectColor"/>
+                    <include name="selectCosmetic"/>
+                    <include name="getItemName"/>
+                    <include name="getItemPrice"/>
+                    <include name="getItemCondition"/>
+                    <include name="getItemQuantity"/>
+                    <include name="addToCart"/>
+                    <include name="assertItemTitle"/>
+                    <include name="assertPrice"/>
+                    <include name="validateQuantity"/>
+                    <include name="assertSubTotal"/>
+                    <include name="getShipping"/>
                 </methods>
             </class>
         </classes>
-
     </test>
+
+
+
 
 
 </suite>
